@@ -4,54 +4,28 @@ A Spring Boot RESTful API that calculates all prime numbers up to and including 
 
 ---
 
-# 📌 Features
+# Features
 
-### ✔ Java 17 (or higher)
+### Java 17 (or higher)
 
-### ✔ Spring Boot REST API
+### Spring Boot REST API
 
-### ✔ Two prime number algorithms
+### Two prime number algorithms
 
-* **Sieve of Eratosthenes** (default, fastest)
-* **Trial Division** (simpler alternative)
+* **Sieve of Eratosthenes** 
+* **Trial Division**
 
-### ✔ JSON & XML support via content negotiation
+### JSON & XML support via content negotiation
 
-### ✔ Response caching using Caffeine
+### Response caching using Caffeine
 
-### ✔ Fully tested
+### Integration and unit tests
 
-* JUnit 5 unit tests
-* Rest Assured integration tests
-
-### ✔ Clean, extensible architecture
+### Clean, extensible architecture
 
 ---
 
-# 📁 Project Structure
-
-```
-prime-service/
-├── pom.xml
-├── src
-│   ├── main
-│   │   ├── java/com/example/primes
-│   │   │   ├── PrimeServiceApplication.java
-│   │   │   ├── controller/PrimesController.java
-│   │   │   ├── service/
-│   │   │   │   ├── PrimeService.java
-│   │   │   │   ├── SievePrimeService.java
-│   │   │   │   └── TrialDivisionPrimeService.java
-│   │   │   └── dto/PrimeResponse.java
-│   │   └── resources/application.yml
-│   └── test
-│       ├── java/com/example/primes/service/* (unit tests)
-│       └── java/com/example/primes/integration/* (integration tests)
-```
-
----
-
-# 🚀 How It Works
+# How It Works
 
 ## 1. PrimeServiceApplication
 
@@ -69,7 +43,7 @@ public class PrimeServiceApplication {
 
 ---
 
-# 🧠 Service Layer
+# Service Layer
 
 The service layer defines how prime numbers are calculated.
 
@@ -86,7 +60,7 @@ public interface PrimeService {
 
 ---
 
-# ⚡ Algorithm Implementations
+# Algorithm Implementations
 
 ## 1. SievePrimeService (Default)
 
@@ -109,7 +83,7 @@ Also cached.
 
 ---
 
-# 🏛 Controller
+# Controller
 
 The REST endpoint lives in `PrimesController`.
 
@@ -137,7 +111,7 @@ Parameters:
 
 ---
 
-# 📦 Caching
+# Caching
 
 Caching is handled by Spring Boot + Caffeine.
 
@@ -155,7 +129,7 @@ caffeine:
 
 ---
 
-# 🧪 Testing
+# Testing
 
 ## Unit Tests (JUnit 5)
 
@@ -172,7 +146,7 @@ Each algorithm class has tests verifying correctness.
 
 ---
 
-# 📜 Building & Running
+# Building & Running
 
 ### Build
 
@@ -200,7 +174,7 @@ mvn test
 
 ---
 
-# 📝 API Examples
+# API Examples
 
 ### JSON example
 
@@ -219,21 +193,3 @@ curl -H "Accept: application/xml" "http://localhost:8080/primes?max=30"
 ```bash
 curl "http://localhost:8080/primes?max=100&algorithm=trial"
 ```
-
----
-
-# 🌟 Extensibility
-
-This system was designed for easy expansion. Some ideas:
-
-### ➕ More algorithms
-
-* Segmented sieve
-* Parallel trial division
-* Wheel factorization
-
-### ⚡ Performance
-
-* Async request processing
-* Better caching strategies
-* Offloading to background workers
