@@ -1,0 +1,6 @@
+com\example\primes\dto\PrimeResponse.class
+com\example\primes\controller\PrimesController.class
+com\example\primes\PrimeServiceApplication.class
+com\example\primes\service\SievePrimeService.class
+com\example\primes\service\TrialDivisionPrimeService.class
+com\example\primes\service\PrimeService.class
