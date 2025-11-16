@@ -1,1 +1,0 @@
-Project files need to be populated manually from the canvas content.
