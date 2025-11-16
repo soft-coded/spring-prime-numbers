@@ -6,22 +6,13 @@ A Spring Boot RESTful API that calculates all prime numbers up to and including 
 
 # Features
 
-### Java 17 (or higher)
-
-### Spring Boot REST API
-
-### Two prime number algorithms
-
+##### Spring Boot REST API
+##### Two prime number algorithms
 * **Sieve of Eratosthenes** 
 * **Trial Division**
-
-### JSON & XML support via content negotiation
-
-### Response caching using Caffeine
-
-### Integration and unit tests
-
-### Clean, extensible architecture
+##### JSON & XML support via content negotiation
+##### Response caching using Caffeine
+##### Integration and unit tests
 
 ---
 
