@@ -11,7 +11,7 @@ import java.util.List;
 public class SievePrimeService implements PrimeService {
 
     @Override
-    @Cacheable("primes")
+    @Cacheable("max")
     public List<Long> primesUpTo(long max) {
         if (max < 2) return List.of();
         if (max > Integer.MAX_VALUE - 10) {

@@ -10,7 +10,7 @@ import java.util.List;
 public class TrialDivisionPrimeService implements PrimeService {
 
     @Override
-    @Cacheable("primes")
+    @Cacheable("max")
     public List<Long> primesUpTo(long max) {
         List<Long> primes = new ArrayList<>();
         if (max < 2) return primes;
